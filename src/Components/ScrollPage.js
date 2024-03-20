@@ -2,8 +2,8 @@ import React from 'react'
 
 const ScrollPage = () => {
   return (
-    <div>
-      scrollpage
+    <div className='scrollPage'>
+      <div className='videoFrame'></div>
     </div>
   )
 }

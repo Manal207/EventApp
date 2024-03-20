@@ -1,6 +1,7 @@
 import React from 'react'
 import ScrollPage from './ScrollPage'
 import EventDetails from './EventDetails'
+import '../Style/Style.css'
 
 const VideoFeed = () => {
   return (

@@ -1,3 +1,39 @@
 .videoFeed{
     display: flex;
 }
+
+.scrollPage {
+    width: 65%;
+    height: 100vh; /* This could be 100vh if you want it to take the full viewport height */
+    /* Add other styles like padding, background color, etc., as per your design */
+    background-color: #cb6060;
+    position: sticky; /* This is required for absolute positioning of children */
+    top: 0;
+  }
+  
+.eventDetails {
+    width: 35%;
+    height: 200vh; /* This could be 100vh if you want it to take the full viewport height */
+    overflow-y: auto; /* This makes the div scrollable */
+    background-color: #5f5fca;
+  }
+
+.videoFrame{
+    width: 50%; /* Or whatever width you prefer */
+    height: 100vh; /* Or whatever height you prefer, vh for viewport height */
+    margin: auto; /* This centers the div horizontally */
+    position: relative; /* Use absolute positioning within the scrollPage */
+    background-color: aqua
+
+}
+
+.eventDetails-title{
+    text-align: center;
+    margin-top: 30px;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

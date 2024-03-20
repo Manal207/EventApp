@@ -3,7 +3,8 @@ import React from 'react'
 const EventDetails = () => {
   return (
     <div className='eventDetails'>
-      EventDetails
+      <div className='eventDetails-title'>Pita Pit Event</div>
+      
     </div>
   )
 }
