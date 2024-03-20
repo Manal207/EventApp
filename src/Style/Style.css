@@ -6,7 +6,7 @@
     width: 65%;
     height: 100vh; /* This could be 100vh if you want it to take the full viewport height */
     /* Add other styles like padding, background color, etc., as per your design */
-    background-color: #cb6060;
+    background-color: #ECECEC;
     position: sticky; /* This is required for absolute positioning of children */
     top: 0;
   }
@@ -15,25 +15,119 @@
     width: 35%;
     height: 200vh; /* This could be 100vh if you want it to take the full viewport height */
     overflow-y: auto; /* This makes the div scrollable */
-    background-color: #5f5fca;
+    background-color: #F5F5F5;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+
+
+
   }
+  /* .eventDetails {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
 
 .videoFrame{
     width: 50%; /* Or whatever width you prefer */
     height: 100vh; /* Or whatever height you prefer, vh for viewport height */
     margin: auto; /* This centers the div horizontally */
     position: relative; /* Use absolute positioning within the scrollPage */
-    background-color: aqua
-
+    background-color: black
 }
 
-.eventDetails-title{
+  
+ 
+  
+  .eventInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .infoBlock p {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+  }
+  
+  .inviteButton {
+    background: #000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: block; /* makes the button occupy the full width */
+    margin-bottom: 10px;
+    border-radius: 7px;
+
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+  }
+  
+  /* Rest of the CSS for centering the text and additional styling */
+  .eventDetails h1 {
     text-align: center;
-    margin-top: 30px;
     color: #000;
     font-family: sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
+  }
+  
+  .aboutSection, .locationSection {
+    text-align: center;
+  }
+  
+  .aboutSection p, .locationSection p {
+    text-align: left;
+  } 
+
+  .aboutSection p{
+    color: rgba(0, 0, 0, 0.59);
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 17px; /* 175% */
+    letter-spacing: 0.9px;
+  }
+
+  .locationSection p{
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+  }
+  .eventDetails h2 {
+    text-align: left;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .map{
+    border-radius: 7px;
+    width: 100%;
+    height: 170px;
+    background-color: aquamarine;
+  }
+
+
