@@ -1,4 +1,9 @@
 import React from 'react'
+import locationIcon from '../Icons/Vector.svg'
+import dateIcon from '../Icons/date.svg'
+import timeIcon from '../Icons/time.svg'
+import peopleIcon from '../Icons/peoplee.svg'
+
 
 const EventDetails = () => {
   return (
@@ -6,12 +11,12 @@ const EventDetails = () => {
       <h1>Pita Pit Event</h1>
       <div className="eventInfo">
         <div className="infoBlock">
-          <p>Cotton District, Starkville</p>
-          <p>134 Participants</p>
+          <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>Cotton District, Starkville</p></div>
+          <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>134 Participants</p></div>
         </div>
         <div className="infoBlock">
-          <p>05/05/2024</p>
-          <p>8PM-10PM</p>
+          <div className='iconAndText'><img src={dateIcon} alt="date" /><p>05/05/2024</p></div>
+          <div className='iconAndText'><img src={timeIcon} alt="time" /><p>8PM-10PM</p></div>
         </div>
       </div>
       <button className="inviteButton">Invite your friend & get a 10% discount</button>
@@ -21,8 +26,9 @@ const EventDetails = () => {
       </div>
       <div className="locationSection">
         <h2>Location</h2>
-        <p>Cotton District, Starkville</p>
-        <div className='map'></div>
+        <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>Cotton District, Starkville</p></div>
+        <div className='map'>
+        </div>
       </div>
     </div>
   )

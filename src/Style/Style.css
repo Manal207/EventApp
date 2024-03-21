@@ -48,6 +48,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    align-items: center;
+  }
+
+ 
+  .infoBlock {
+    align-items: center; /* This will vertically center the text with the image */
+    margin-bottom: 10px; /* Add space between the info blocks if needed */
   }
   
   .infoBlock p {
@@ -57,8 +65,24 @@
     font-style: normal;
     font-weight: 550;
     line-height: normal;
+    
   }
-  
+  .infoBlock img{
+    margin-right: 5px;
+    
+  }
+
+  .locationSection img {
+    margin-right: 5px;
+  }
+
+
+  .iconAndText{
+    display: flex;
+    align-items: center; /* This will vertically center the text with the image */
+    justify-content: flex-start; /* This will align the items to the start of the block */
+  }
+ 
   .inviteButton {
     background: #000;
     padding: 10px;
