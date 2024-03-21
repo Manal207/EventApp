@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../Style/PhoneNumberForm.css'
+import usaFlag from '../Icons/usaFlag.svg'
 
 
 const PhoneNumberForm = () => {
@@ -16,9 +18,12 @@ const PhoneNumberForm = () => {
     <div className="phoneFormContainer">
       <form onSubmit={handleSubmit} className="phoneForm">
         <h2>Your Phone Number</h2>
-        <div className="countryInfo">
-          {/* <img src={usFlag} alt="US Flag" className="flagIcon" /> */}
-          <p className="countryLabel">United States (+1)</p>
+        <div className='countryBox'>
+            <p className='regionLabel'>Country/Region</p>
+            <div className="countryInfo">
+            <img src={usaFlag} alt="US Flag" className="flagIcon" />
+            <p className="countryLabel">United States (+1)</p>
+            </div>
         </div>
         <input
           type="tel"
@@ -28,10 +33,12 @@ const PhoneNumberForm = () => {
           className="phoneNumberInput"
         />
         <div className="termsContainer">
-          <label>
-            <input type="checkbox" />
-            By checking the box, you agree to our Terms of Service and Privacy Policy
-          </label>
+            <div className='check'>
+                <input type="checkbox" />
+                <label>
+                    By checking the box, you agree to our Terms of Service and Privacy Policy
+                    </label>
+            </div>
           <a href="/terms">Read our Terms and Privacy Policy</a>
         </div>
         <button type="submit" className="continueButton">Continue</button>
