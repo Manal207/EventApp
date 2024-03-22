@@ -9,7 +9,7 @@
   .phoneForm {
     background: #ffffff;
     padding: 40px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px; /* Maximum width of the form */
@@ -30,6 +30,7 @@
     flex-shrink: 0;
     border-radius: 7px 7px 0px 0px;
     background: rgba(0, 0, 0, 0.05);
+    margin-bottom: 4px;
   }
 
   .regionLabel{
@@ -57,12 +58,17 @@
   }
   
   .countryLabel {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
+    color: rgba(0, 0, 0, 0.76);
+ 
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
   
   .phoneNumberInput {
-    width: 92%;
     padding: 20px;
     border: 0px solid #ccc;
     flex-shrink: 0;
@@ -73,6 +79,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    
   }
   
   .termsContainer {
@@ -134,4 +141,22 @@
   .continueButton:hover {
     background-color: #333;
   }
+
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+  }
   
+  @media (max-width: 768px){
+    .phoneFormContainer {
+      background-color: #ffffff; /* Your desired background color */
+    }
+  }
+
+  @media (max-width: 768px){
+    .phoneForm {
+      background: #ffffff;
+      box-shadow: none;
+    }
+  }

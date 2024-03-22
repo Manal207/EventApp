@@ -155,3 +155,51 @@
   }
 
 
+
+  .video-content h1{
+    color: #ECECEC;
+  }
+
+  .video-content p{
+    color: #ECECEC;
+  }
+
+  @media (min-width: 768px){
+    .video-content{
+      display: none;
+    }
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+  
+  .scrollPage {
+      width: 100%;
+      height: 50vh;
+  }
+  .videoFrame {
+      width: 100%;
+      height: 100vh;
+  }
+  .eventDetails {
+    display: none;
+  }
+}
+
+
+/* @media (min-width: 768px) {
+  .scrollPage, .eventDetails {
+    display: block;
+  
+  }
+}
+
+@media (max-width: 767px) {
+  .scrollPage, .eventDetails {
+    display: block;
+    width: 100%;
+  }
+} */
