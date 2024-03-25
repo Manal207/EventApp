@@ -58,15 +58,14 @@
   .codeBox {
     width: 10px;
     height: 10px;
-    padding: 10px;
-    font-size: 24px;
+    padding: 20px;
+    font-size: 20px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 7px;
     flex-shrink: 0;
     background: rgba(0, 0, 0, 0.05);
 
-    padding: 20px;
 
     font-family:sans-serif;
     font-style: normal;

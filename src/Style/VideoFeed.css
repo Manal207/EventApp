@@ -20,11 +20,22 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-
-
-
-
   }
+
+  .eventDetailss {
+    width: 100%;
+    height: 200vh; /* This could be 100vh if you want it to take the full viewport height */
+    overflow-y: auto; /* This makes the div scrollable */
+    background-color: #F5F5F5;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  
   /* .eventDetails {
     padding: 20px;
     box-sizing: border-box;
@@ -101,7 +112,7 @@
   }
   
   /* Rest of the CSS for centering the text and additional styling */
-  .eventDetails h1 {
+  .eventDetails h1, .eventDetailss h1 {
     text-align: center;
     color: #000;
     font-family: sans-serif;
@@ -137,7 +148,7 @@
     font-weight: 550;
     line-height: normal;
   }
-  .eventDetails h2 {
+  .eventDetails h2, .eventDetailss h2 {
     text-align: left;
     color: #000;
     font-family: sans-serif;
@@ -158,6 +169,12 @@
 
   .video-content h1{
     color: #ECECEC;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 
   .video-content p{
@@ -177,18 +194,49 @@
 @media (max-width: 768px) {
   
   .scrollPage {
-      width: 100%;
-      height: 50vh;
+    width: 100%;
+    min-height: 100%; /* 100% of the viewport height */
+    position: relative; /* Establishes a positioning context for .video-content */
+    background-color: #c31919;
   }
+  
+  /* Adjust .videoFrame so it doesn't cause scrolling */
   .videoFrame {
-      width: 100%;
-      height: 100vh;
+    width: 100%;
+    /* Make .videoFrame take up all available space except for the height of .video-content */
+    height: 100vh; /* Adjust 120px to the height of your .video-content */
+    overflow: hidden; /* Prevent scrolling within .videoFrame */
   }
+  
+  /* Set .video-content to be fixed at the bottom */
+  .video-content {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0; /* Aligns to the bottom of the screen */
+    left: 0; /* Aligns to the left of the screen */
+    width: 100%; /* Full width of the screen */
+    padding: 15px;
+  }
+  
+  /* Hide .eventDetails as you have already done */
   .eventDetails {
     display: none;
   }
+  
+  
 }
 
+
+/* @media (max-width: 768px) {
+  .eventDetailss{
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .eventDetailss {
+    width: 800px; 
+  }
+} */
 
 /* @media (min-width: 768px) {
   .scrollPage, .eventDetails {
@@ -203,3 +251,4 @@
     width: 100%;
   }
 } */
+
