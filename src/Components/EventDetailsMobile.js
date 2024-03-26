@@ -7,6 +7,9 @@ import '../Style/VideoFeed.css'
 import GoogleMapReact from 'google-map-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
+
+
 
 
 const Marker = ({ lat, lng }) => {
@@ -32,10 +35,13 @@ const Marker = ({ lat, lng }) => {
 
 const EventDetailsMobile = () => {
 
-    const staticLocation = {
+  const location = useLocation();
+  const event = location.state.event; // Accessing the event details passed through state
+
+    const Location = {
         center: {
-          lat: 33.4641442512065,
-          lng: -88.81655637063872
+          lat: event.lat,
+          lng: event.lng
         },
         zoom: 11
       };
@@ -43,34 +49,34 @@ const EventDetailsMobile = () => {
 
   return (
     <div className="eventDetailss">
-      <h1>Pita Pit Event</h1>
+      <h1>{event.name}</h1>
       <div className="eventInfo">
         <div className="infoBlock">
-          <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>Cotton District, Starkville</p></div>
-          <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>134 Participants</p></div>
+          <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>{event.location}</p></div>
+          <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>{event.participants} Participants</p></div>
         </div>
         <div className="infoBlock">
-          <div className='iconAndText'><img src={dateIcon} alt="date" /><p>05/05/2024</p></div>
-          <div className='iconAndText'><img src={timeIcon} alt="time" /><p>8PM-10PM</p></div>
+          <div className='iconAndText'><img src={dateIcon} alt="date" /><p>{event.date}</p></div>
+          <div className='iconAndText'><img src={timeIcon} alt="time" /><p>{event.time}</p></div>
         </div>
       </div>
       <button className="inviteButton">Invite your friend & get a 10% discount</button>
       <div className="aboutSection">
         <h2>About</h2>
-        <p>Join us for an unforgettable evening at the Pita Pit Event...</p>
+        <p>{event.description}</p>
       </div>
       <div className="locationSection">
         <h2>Location</h2>
-        <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>Cotton District, Starkville</p></div>
+        <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>{event.location}</p></div>
         <div className='map' style={{ height: '250px', width: '100%' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyCu0lPeaEsHIvgXA8Tbzo0I-3PIQT-MdHM' }} // Replace with your Google Maps API key
-                defaultCenter={staticLocation.center}
-                defaultZoom={staticLocation.zoom}
+                defaultCenter={Location.center}
+                defaultZoom={Location.zoom}
             >
                 <Marker
-                lat={staticLocation.center.lat}
-                lng={staticLocation.center.lng}
+                lat={event.lat}
+                lng={event.lng}
                 />
                 
             </GoogleMapReact>

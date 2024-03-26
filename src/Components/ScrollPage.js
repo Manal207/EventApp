@@ -8,7 +8,7 @@ const ScrollPage = ({ event, goToNextEvent, goToPreviousEvent }) => {
   const navigate= useNavigate();
 
   const onClick=()=>{
-    navigate('/EventDetailsMobile')
+    navigate('/EventDetailsMobile', { state: { event } });
   }
 
 
