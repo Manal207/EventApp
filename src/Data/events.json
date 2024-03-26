@@ -9,7 +9,8 @@
       "time": "6PM-9PM",
       "lat": 33.4641442512065,
       "lng": -88.81655637063872,
-      "imageUrl": "/Images/PitaPit.jpg"
+      "imageUrl": "/Images/PitaPit.jpg",
+      "videoUrl":"/Videos/food.mp4"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
       "time": "10PM-1AM",
       "lat": 33.4641442512065,
       "lng": -88.81655637063872,
-      "imageUrl": "/Images/Moes.jpg"
+      "imageUrl": "/Images/Moes.jpg",
+      "videoUrl": "/Videos/party.mp4"
 
     }
 
