@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "name": "Pita Pitttt Event",
+      "description": "Join us for an unforgettable night at Pita Pit",
+      "location": "Downtown, Starkville",
+      "participants": 50,
+      "date": "05/05/2024",
+      "time": "6PM-9PM",
+      "lat": 33.4641442512065,
+      "lng": -88.81655637063872,
+      "imageUrl": "/Images/PitaPit.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Moeeee's Event",
+      "description": "Join us for an unforgettable night at Moe's",
+      "location": "Downtown, Starkville",
+      "participants": 134,
+      "date": "02/05/2024",
+      "time": "10PM-1AM",
+      "lat": 33.4641442512065,
+      "lng": -88.81655637063872,
+      "imageUrl": "/Images/Moes.jpg"
+
+    }
+
+  ]

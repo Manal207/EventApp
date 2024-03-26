@@ -29,7 +29,7 @@ const Marker = ({ lat, lng }) => {
 
 
 
-const EventDetails = () => {
+const EventDetails = ({event}) => {
 
   const staticLocation = {
     center: {
@@ -43,7 +43,7 @@ const EventDetails = () => {
 
   return (
     <div className="eventDetails">
-      <h1>Pita Pit Event</h1>
+      <h1>{event.name}</h1>
       <div className="eventInfo">
         <div className="infoBlock">
           <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>Cotton District, Starkville</p></div>
@@ -68,7 +68,7 @@ const EventDetails = () => {
             defaultCenter={staticLocation.center}
             defaultZoom={staticLocation.zoom}
           >
-             
+            
             <Marker
               lat={staticLocation.center.lat}
               lng={staticLocation.center.lng}

@@ -2,37 +2,42 @@ import React from 'react'
 import { useState } from 'react'
 import ScrollPage from './ScrollPage'
 import EventDetails from './EventDetails'
+import eventsData from '../Data/events.json';
+import { useEffect } from 'react';
 import '../Style/VideoFeed.css'
 
 
 const VideoFeed = () => {
 
-  // const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
-  // const [showEventDetails, setShowEventDetails] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
 
-  // const handleResize = () => {
-  //   setIsMobileView(window.innerWidth < 768);
-  // };
+  useEffect(() => {
+    // In a real app, you might fetch this data from a server
+    setEvents(eventsData);
+  }, []);
 
-  // const handleComponentAClick = () => {
-  //   if (isMobileView) {
-  //     setShowEventDetails(true);
-  //   }
-  // };
+  const goToNextEvent = () => {
+    setCurrentEventIndex((prevIndex) => (prevIndex + 1) % events.length);
+  };
 
-  // // Attach event listener for resizing
-  // React.useEffect(() => {
-  //   window.addEventListener('resize', handleResize);
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+  const goToPreviousEvent = () => {
+    setCurrentEventIndex((prevIndex) => (prevIndex - 1 + events.length) % events.length);
+  };
 
  
   return (
     <div className='videoFeed'>
-      <ScrollPage/>
-      <EventDetails/>
+       {events.length > 0 && (
+        <>
+          <ScrollPage
+            event={events[currentEventIndex]}
+            goToNextEvent={goToNextEvent}
+            goToPreviousEvent={goToPreviousEvent}
+          />
+          <EventDetails event={events[currentEventIndex]} />
+        </>
+      )}
     </div>
   )
 }
