@@ -19,7 +19,6 @@ const Marker = ({ lat, lng }) => {
   return (
     <div className='icon-and-text' onClick={handleClick} style={{
       cursor: 'pointer',
-      // Your custom marker styling
     }}>
       
       <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" /><div className='openItenary'>Open Iternary</div>
@@ -67,16 +66,12 @@ const EventDetails = ({event}) => {
             bootstrapURLKeys={{ key: 'AIzaSyCu0lPeaEsHIvgXA8Tbzo0I-3PIQT-MdHM' }} // Replace with your Google Maps API key
             defaultCenter={Location.center}
             defaultZoom={Location.zoom}
-          >
-            
+          > 
             <Marker
               lat={event.lat}
               lng={event.lng}
             />
-            
           </GoogleMapReact>
-
-        
         </div>
       </div>
     </div>
@@ -84,3 +79,4 @@ const EventDetails = ({event}) => {
 }
 
 export default EventDetails
+
