@@ -61,10 +61,9 @@ React.useEffect(() => {
         onTouchEnd={onTouchEnd}>
         {/* <img src={event.imageUrl} alt={event.name} style={{ width: '100%'}} /> */}
         <video 
-          src={event.videoUrl} 
+          src={event.video} 
           alt={event.name} 
           style={{ width: '100%', height: 'auto' }} 
-          autoplay 
           playsInline
           muted
           loop
