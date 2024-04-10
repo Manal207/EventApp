@@ -48,12 +48,19 @@ const EventDetailsMobile = () => {
 
 
   return (
-    <div className="eventDetailss">
+    <div>
+
+      <div className='img-container'>
+        <img className='img' src={event.image} alt="Event Top" />
+      </div>
+      
+      <div className="eventDetailss">
+      
       <h1>{event.name}</h1>
       <div className="eventInfo">
         <div className="infoBlock">
           <div className='iconAndText'><img src={locationIcon} alt="Location" /><p>{event.location}</p></div>
-          <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>{event.participants} Participants</p></div>
+          <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>{event.participants} Participantssss</p></div>
         </div>
         <div className="infoBlock">
           <div className='iconAndText'><img src={dateIcon} alt="date" /><p>{event.date}</p></div>
@@ -83,6 +90,8 @@ const EventDetailsMobile = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   )
 }
 

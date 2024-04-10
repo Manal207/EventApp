@@ -4,7 +4,6 @@ import {BrowserRouter,Route, Routes} from 'react-router-dom'
 import VideoFeed from './Components/VideoFeed';
 import PhoneNumberForm from './Components/PhoneNumberForm';
 import VerificationPhoneNumber from './Components/VerificationPhoneNumber';
-import EventDetails from './Components/EventDetails';
 import EventDetailsMobile from './Components/EventDetailsMobile';
 
 function App() {

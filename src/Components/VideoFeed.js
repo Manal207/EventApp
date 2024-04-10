@@ -14,15 +14,15 @@ const VideoFeed = () => {
 
   useEffect(() => {
     // In a real app, you might fetch this data from a server
-    // setEvents(eventsData);
-      fetch('http://localhost:8080/api/events/') // Update this URL to the endpoint where your Django API serves the event data
-      .then(response => response.json())
-      .then(data => {
-        setEvents(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
-      });
+    setEvents(eventsData);
+      // fetch("http://localhost:8080/api/events/") // Update this URL to the endpoint where your Django API serves the event data
+      // .then(response => response.json())
+      // .then(data => {
+      //   setEvents(data);
+      // })
+      // .catch(error => {
+      //   console.error('Error fetching data: ', error);
+      // });
   }, []);
 
   const goToNextEvent = () => {
@@ -49,6 +49,4 @@ const VideoFeed = () => {
     </div>
   )
 }
-
-
 export default VideoFeed
