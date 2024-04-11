@@ -96,9 +96,7 @@
     flex-direction: column;
   }
 
-  .img-contianer{
-    position: fixed;
-  }
+  
  
 
   .img-container {
@@ -185,6 +183,11 @@
     display: flex;
     align-items: center; /* This will vertically center the text with the image */
     justify-content: flex-start; /* This will align the items to the start of the block */
+  }
+  .iconAndText2{
+    display: flex;
+    align-items: center; /* This will vertically center the text with the image */
+    justify-content: flex-end; /* This will align the items to the start of the block */
   }
  
   .inviteButton {

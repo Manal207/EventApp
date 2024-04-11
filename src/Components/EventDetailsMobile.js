@@ -63,8 +63,8 @@ const EventDetailsMobile = () => {
           <div className='iconAndText'><img src={peopleIcon} alt="people" /><p>{event.participants} Participantssss</p></div>
         </div>
         <div className="infoBlock">
-          <div className='iconAndText'><img src={dateIcon} alt="date" /><p>{event.date}</p></div>
-          <div className='iconAndText'><img src={timeIcon} alt="time" /><p>{event.time}</p></div>
+          <div className='iconAndText2'><img src={dateIcon} alt="date" /><p>{event.date}</p></div>
+          <div className='iconAndText2'><img src={timeIcon} alt="time" /><p>{event.time}</p></div>
         </div>
       </div>
       <button className="inviteButton">Invite your friend & get a 10% discount</button>
